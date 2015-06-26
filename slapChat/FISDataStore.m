@@ -92,6 +92,9 @@
 
 - (void)generateTestData
 {
+    
+    
+    
     Message *messageOne = [NSEntityDescription insertNewObjectForEntityForName:@"Message" inManagedObjectContext:self.managedObjectContext];
     
     messageOne.content = @"Message 1";

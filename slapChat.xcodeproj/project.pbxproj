@@ -23,8 +23,10 @@
 		D879F372195E02B400FC5285 /* FISDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = D879F371195E02B400FC5285 /* FISDataStore.m */; };
 		D879F375195E02C000FC5285 /* slapChat.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D879F373195E02C000FC5285 /* slapChat.xcdatamodeld */; };
 		D879F377195E030C00FC5285 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D879F376195E030C00FC5285 /* CoreData.framework */; };
-		D879F37A195E032D00FC5285 /* FISTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D879F379195E032D00FC5285 /* FISTableViewController.m */; };
+		D879F37A195E032D00FC5285 /* MessageTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D879F379195E032D00FC5285 /* MessageTableViewController.m */; };
 		D879F3A91961F1E800FC5285 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = D879F3A81961F1E800FC5285 /* Message.m */; };
+		DBEEAFC21B3CA4160032F691 /* RecipientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEEAFC11B3CA4160032F691 /* RecipientTableViewController.m */; };
+		DBEEAFC51B3CA8130032F691 /* Recipient.m in Sources */ = {isa = PBXBuildFile; fileRef = DBEEAFC41B3CA8130032F691 /* Recipient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,10 +61,14 @@
 		D879F371195E02B400FC5285 /* FISDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISDataStore.m; sourceTree = "<group>"; };
 		D879F374195E02C000FC5285 /* slapChat.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = slapChat.xcdatamodel; sourceTree = "<group>"; };
 		D879F376195E030C00FC5285 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		D879F378195E032D00FC5285 /* FISTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTableViewController.h; sourceTree = "<group>"; };
-		D879F379195E032D00FC5285 /* FISTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTableViewController.m; sourceTree = "<group>"; };
+		D879F378195E032D00FC5285 /* MessageTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTableViewController.h; sourceTree = "<group>"; };
+		D879F379195E032D00FC5285 /* MessageTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTableViewController.m; sourceTree = "<group>"; };
 		D879F3A71961F1E800FC5285 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
 		D879F3A81961F1E800FC5285 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		DBEEAFC01B3CA4160032F691 /* RecipientTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RecipientTableViewController.h; sourceTree = "<group>"; };
+		DBEEAFC11B3CA4160032F691 /* RecipientTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RecipientTableViewController.m; sourceTree = "<group>"; };
+		DBEEAFC31B3CA8130032F691 /* Recipient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recipient.h; sourceTree = "<group>"; };
+		DBEEAFC41B3CA8130032F691 /* Recipient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recipient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				D879F373195E02C000FC5285 /* slapChat.xcdatamodeld */,
+				DBEEAFC31B3CA8130032F691 /* Recipient.h */,
+				DBEEAFC41B3CA8130032F691 /* Recipient.m */,
 				D879F3A71961F1E800FC5285 /* Message.h */,
 				D879F3A81961F1E800FC5285 /* Message.m */,
 				D879F370195E02B400FC5285 /* FISDataStore.h */,
@@ -132,8 +140,10 @@
 				D879F347195E028000FC5285 /* FISAppDelegate.h */,
 				D879F348195E028000FC5285 /* FISAppDelegate.m */,
 				D879F34A195E028000FC5285 /* Main.storyboard */,
-				D879F378195E032D00FC5285 /* FISTableViewController.h */,
-				D879F379195E032D00FC5285 /* FISTableViewController.m */,
+				DBEEAFC01B3CA4160032F691 /* RecipientTableViewController.h */,
+				DBEEAFC11B3CA4160032F691 /* RecipientTableViewController.m */,
+				D879F378195E032D00FC5285 /* MessageTableViewController.h */,
+				D879F379195E032D00FC5285 /* MessageTableViewController.m */,
 				D879F350195E028000FC5285 /* Images.xcassets */,
 				D879F33F195E028000FC5285 /* Supporting Files */,
 			);
@@ -268,11 +278,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D879F345195E028000FC5285 /* main.m in Sources */,
+				DBEEAFC51B3CA8130032F691 /* Recipient.m in Sources */,
 				D879F3A91961F1E800FC5285 /* Message.m in Sources */,
 				D879F375195E02C000FC5285 /* slapChat.xcdatamodeld in Sources */,
 				D879F372195E02B400FC5285 /* FISDataStore.m in Sources */,
 				D879F349195E028000FC5285 /* FISAppDelegate.m in Sources */,
-				D879F37A195E032D00FC5285 /* FISTableViewController.m in Sources */,
+				DBEEAFC21B3CA4160032F691 /* RecipientTableViewController.m in Sources */,
+				D879F37A195E032D00FC5285 /* MessageTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

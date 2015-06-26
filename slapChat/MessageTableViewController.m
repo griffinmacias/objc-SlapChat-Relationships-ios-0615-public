@@ -6,39 +6,26 @@
 //  Copyright (c) 2014 Joe Burgess. All rights reserved.
 //
 
-#import "FISTableViewController.h"
-#import "Message.h"
+#import "MessageTableViewController.h"
 
-@interface FISTableViewController ()
+
+@interface MessageTableViewController ()
 
 @end
 
-@implementation FISTableViewController
-
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
+@implementation MessageTableViewController
 
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.store = [FISDataStore sharedDataStore];
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
 
-    [self.store fetchData];
     [self.tableView reloadData];
 }
 
@@ -59,19 +46,21 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.store.messages count];
+    return self.messages.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"basiccell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"messageID" forIndexPath:indexPath];
     
-    Message *eachMessage = self.store.messages[indexPath.row];
     
-    cell.textLabel.text = eachMessage.content;
     
-    // Configure the cell...
+    // Configure the cell..
+    
+    Message *message = self.messages[indexPath.row];
+    
+    cell.textLabel.text = message.content;
     
     return cell;
 }
